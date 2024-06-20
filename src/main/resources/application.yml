@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: authentication
+  datasource:
+    password: secretpassword
+    url: jdbc:postgresql://localhost:5432/registration
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  mail:
+    host: localhost
+    port: 1025
+    username: hello
+    password: hello
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
+
+server:
+  error:
+    include-message: always
+
+admin:
+  username: admin@admin.com
+  password: admin
+
+config:
+  loginUrl: "/api/v1/login"
+  secret: "secret"
+  accessTokenExpirationTime: 10
+  resetTokenExpirationTime: 30
+  origin: "http://localhost:3000"
