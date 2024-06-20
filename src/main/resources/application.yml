@@ -1,6 +1,6 @@
 spring:
   application:
-    name: authentication
+    name: jwt-spring-authentication
   datasource:
     password: secretpassword
     url: jdbc:postgresql://localhost:5432/registration
